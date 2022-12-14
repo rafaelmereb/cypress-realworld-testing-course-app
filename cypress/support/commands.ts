@@ -10,3 +10,7 @@ Cypress.Commands.add("loginByApi", (username, password) => {
         password,
     })
 })
+
+Cypress.Commands.add("imOnAStableChromiumBasedBrowser", () => {
+    return Cypress.isBrowser({ family: 'chromium', channel: 'stable' })
+})

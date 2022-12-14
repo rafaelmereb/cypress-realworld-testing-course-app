@@ -19,4 +19,33 @@ describe('empty spec', () => {
       cy.get('span').contains('Testing Next.js Applications with Cypress')
     })
   })
+
+  it('my directory has JSON files', () => {
+    // if windows do one thing, else do another
+    const cmd = Cypress.platform === 'win32' ? 'dir *.json' : 'ls *.json'
+    cy.exec(cmd).its('stdout').should('include', 'package.json')
+  })
+
+  it('logging a message according to my browser', () => {
+    // true when running in Firefox
+    if (Cypress.isBrowser('firefox')) {
+      cy.log('I\'m on Firefox!')
+    }
+
+    // true when running in Chrome
+    if (Cypress.isBrowser('chrome')) {
+      cy.log('I\'m on Google Chrome!')
+    }
+
+    // true when running in Electron
+    if (Cypress.isBrowser('electron')) {
+      cy.log('I\'m on Electron!')
+    }
+
+    // true when running in browser other than chrome, firefox and electron
+    if (Cypress.isBrowser(['!chrome', '!electron', '!firefox'])) {
+      cy.log('I\'m not on chrome, electron or firefox. I\'m on a different browser!')
+    }
+
+  })
 })
