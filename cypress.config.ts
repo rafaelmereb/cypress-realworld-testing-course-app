@@ -94,8 +94,6 @@ export default defineConfig({
 
     env: {
       API_BASE_URL: "https://api.typeform.com",
-      ACCESS_TOKEN: "tfp_AXKCzwCeYWCxtdgQ6Y7T5kX2P85ke4EucqfjkPm3cVq3_3pYNtE6179XJsF",
-      FORM_ID: "QYFOWVt5",
 
       DB: {
         "user": "postgres",
@@ -104,9 +102,6 @@ export default defineConfig({
         "password": "postgres",
         "port": 5432,
       },
-      googleRefreshToken: '1//04uoGVMF8mi4bCgYIARAAGAQSNwF-L9Ir8i8w71mrFs6-FVrA0ZY2yS4_2Annc95P64PoZ0gDz2uTdh2dCrfA-ZQ4EPy5VbghnN0',
-      googleClientId: '644866644184-1s0vsoalde3n97ibki7n5qirqe3pjti3.apps.googleusercontent.com',
-      googleClientSecret: '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'
     }
   },
 
